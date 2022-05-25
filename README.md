@@ -57,7 +57,7 @@ terraform destroy
 ***
 
 ## Sample Dashboard
-<img src="https://imgur.com/a/4lz6NrZ" width="300">
+<img src="./images/dashboard.png" width="800">
 
 ***
 ## Licensing
