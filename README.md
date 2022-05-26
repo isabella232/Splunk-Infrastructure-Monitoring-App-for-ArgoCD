@@ -11,8 +11,9 @@ ArgoCD servers produce a series of metrics which can be sent to SignalFx. The fu
 2. Import dashboard module. Sample `dashboard.tf`
 ```
 module "dashboard" {
-    source              = "git@github.com:splunk/signalfx-argocd.git"
+    source              = "git::https://github.com/splunk/signalfx-argocd.git"
     signalfx_auth_token = var.signalfx_auth_token
+    signalfx_api_url = var.signalfx_api_url
 }
 ```
 3. Declare variables. Sample `variables.tf`
