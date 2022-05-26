@@ -1,0 +1,26 @@
+name: 'Terraform'
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    container:
+      ghcr.io/splunk/workflow-engine-base:2.0.3
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Terraform init
+        run: terraform init
+        
+      - name: Validate terraform
+        run: terraform validate
