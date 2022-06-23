@@ -1,4 +1,4 @@
-# SignalFx dashboards for ArgoCD
+# Splunk App for ArgoCD Dashboards
 ArgoCD observability dashboards for SignalFx. See Sample dashboard below.
 
 ArgoCD servers produce a series of metrics which can be sent to SignalFx. The full list of metrics output by ArgoCD can be seen [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/).
