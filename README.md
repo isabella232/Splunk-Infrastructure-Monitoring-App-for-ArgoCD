@@ -1,24 +1,24 @@
-# Splunk App for ArgoCD Dashboards
-ArgoCD observability dashboards for SignalFx. See Sample dashboard below.
+# Splunk Infrastructure Monitoring App for ArgoCD
+ArgoCD observability dashboards for Splunk Infrastructure Monitoring. See Sample dashboard below.
 
-ArgoCD servers produce a series of metrics which can be sent to SignalFx. The full list of metrics output by ArgoCD can be seen [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/).
+ArgoCD servers produce a series of metrics which can be sent to Splunk Infrastructure Monitoring. The full list of metrics output by ArgoCD can be seen [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/).
 
 ***
 ## Simple Setup
-1. Set up SignalFx metrics ingestion
+1. Set up Splunk Infrastructure Monitoring metrics ingestion
     1. Simplest method is to use [`Splunk Otel Collector`](https://github.com/signalfx/splunk-otel-collector) and expose the relevant ports for each [ArgoCD server](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/).
 
 2. Import dashboard module. Sample `dashboard.tf`
 ```
 module "dashboard" {
-    source              = "git::https://github.com/splunk/signalfx-argocd.git"
-    signalfx_auth_token = var.signalfx_auth_token
-    signalfx_api_url = var.signalfx_api_url
+    source              = "git::https://github.com/splunk/splunk-infrastructure-monitoring-app-for-argocd.git"
+    sim_auth_token = var.sim_auth_token
+    sim_api_url = var.sim_api_url
 }
 ```
 3. Declare variables. Sample `variables.tf`
 ```
-variable "signalfx_auth_token" {
+variable "sim_auth_token" {
   type        = string
 }
 ```
