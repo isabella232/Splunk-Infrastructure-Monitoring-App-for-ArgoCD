@@ -34,7 +34,7 @@ terraform destroy
 ***
 ## File structure
 ```
-📦 terraform-signalfx
+📦 Splunk-Infrastructure-Monitoring-App-for-ArgoCD
  ┣ 📂 charts
  ┃ ┗ 📂 app_count
  ┃ ┗ 📂 degraded_health
